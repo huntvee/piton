@@ -24,3 +24,18 @@ def lista_atlag(lista):
     atlag = lista_osszeg(lista)
     return atlag/len(lista)
 print (lista_atlag(l1))
+
+gy = ['alma','narancs','barack','pomelo']
+def nagybetusit(lista):
+    for i in range(len(lista)):
+        lista[i] = lista[i].upper()
+    return lista
+print (gy)
+print (nagybetusit(gy[:]))
+print(gy)
+d1 = {
+    'nev': 'dobrostorta',
+    'szeletek': 12,
+    'elfogyott': False
+}
+print (d1['szeletek'])

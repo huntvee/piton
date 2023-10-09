@@ -40,3 +40,15 @@ if szam > 3:
 elif szam < 3:
     print('a szam kisebb mint 3')
 ```
+
+```mermaid
+flowchart TD
+```
+
+```mermaid
+    
+    title:cim
+
+
+
+```

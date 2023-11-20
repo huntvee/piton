@@ -47,4 +47,4 @@ x= 6/4
 y = 6//4
 z = 6%4 
 
-print (x,y,z)S
+print (x,y,z)

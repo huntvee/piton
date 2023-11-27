@@ -14,7 +14,12 @@ for i in range(len(tamadasok)):
     for n in range(0,7):
         tamadasok[i].append(random.randint(3,9))
 #3 feladat
-    print(f'{i+1}. Hét: {tamadasok[i]}')
+    print(f'{i+1}. Hét: ', end='')
+    c = 0
+    for x in range(len(tamadasok[i])):
+        print(tamadasok[i][x], end=' ')
+        if x%6 == 0 and x != 0:
+            print()
 #4 feladat
 osszes = 0
 for i in range(hetek):
@@ -39,7 +44,6 @@ for i in range(hetek):
             legtobbhet = i
             legtobbnap = n
 #1 megoldás
-'''
 def nap(n):
     if n+1 == 1:
         return ('Hétfő')
@@ -57,7 +61,8 @@ def nap(n):
         return('Vasárnap')
 print (f'Egy napon megtörtént legtöbb támadás száma: {legtobb} db')
 print (f'Helye: {legtobbhet+1}. hét, {nap(legtobbnap)}')
-'''
 #2 megoldás
+'''
 print (f'Egy napon megtörtént legtöbb támadás száma: {legtobb} db')
 print (f'Helye: {legtobbhet+1}. hét, {calendar.day_name[legtobbnap]}')
+'''

@@ -33,3 +33,5 @@ def masodfoku(a:float,b:float,c:float):
 x = masodfoku(1,3,1)
 if x == None:
     print("nincs zerushely")
+if type(x)==type(tuple()):
+    print("ket zerushely van")

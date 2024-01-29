@@ -1,31 +1,60 @@
-def osszegzes(l:list):
-    """
-    Osszegzes prog tetel
-    return elemek osszege
-    """
-    s = 0
+def osszegzes_tetel(l:list, func)->int:
+    szum = l[0]
+    for i in range(1, len(l)):
+        szum = func(szum, l[i])
+    return szum
+
+def osszead(num1,num2):
+    return num1+num2
+
+def szorzas(num1,num2):
+    return num1*num2
+
+print(osszegzes_tetel([1,2,3,4,5], lambda num1,num2:num1+num2))
+print(osszegzes_tetel([1,2,3,4,5], lambda num1,num2:num1*num2))
+osszeadas = lambda num1,num2:num1+num2
+print(osszegzes_tetel([1,2,3,4,5], osszeadas))
+
+def megszámlálás(l:list, condition)->int:
+    count = 0
     for i in range(len(l)):
-        s += l[i]
-    return s
-print(osszegzes([2,3,4]))
-def megszamolas(l:list):
-    c = 0
+        if condition(l[i]) == 0:
+            count += 1
+    return count
+
+def paros(num:int)->bool:
+    return num%2==0
+    
+print(megszámlálás([1,2,3,4,5], lambda num: num%2==0))
+
+def maxkivalasztas(l:list, condition)->tuple:
+    maxind = 0
+    maxert = l[0]
+    for i in range(len(l)-1):
+        if condition(l[i], maxert):
+            maxind = i
+            maxert = l[i]
+    return maxind, maxert
+
+def kisebb(num1,num2):
+    return(num1< num2)
+
+def nagyobb(num1,num2):
+    return(num1> num2)
+
+def keresés(l:list):
     for i in range(len(l)):
-        c += 1
-    return c
-print(megszamolas([1,2,2,34,2,24]))
-def maxert(l:list):
-    mxert = 0
-    mxindex = 0
+        if l[i] == 0:
+            return True, i
+    return False
+
+def eldöntés(l:list)->bool:
     for i in range(len(l)):
-        if l[i] > mxert:
-            mxert = l[i]
-            mxindex = i
-    return mxert, mxindex
-print(maxert([1,4,62,47,2334]))
-def kereses(l:list, x):
+        if l[i] == 0:
+            return True
+    return False
+
+def kiválasztás(l:list)->int:
     for i in range(len(l)):
-        if l[i] == x:
-            return i+1, x
-print(kereses(l=[23,35,75,23,3], x=3))
-def eldontes(l:list, x):
+        if l[i] == 0:
+            return l[i], i

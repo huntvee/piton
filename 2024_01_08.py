@@ -20,7 +20,7 @@ while True:
         print('Hibás adatbevitel vagy kezdő sorszám! Próbáld meg újra...')
 while True:
     maxert = int(input(f'Add meg a befejező sorszámot [1...100]:'))
-    if 0 <= maxert <= 100 and maxert > minert:
+    if 0 <= maxert >= 1 and maxert > minert:
         break
     else:
         print('Hibás adatbevitel vagy befejező sorszám! Próbáld meg újra...')

@@ -22,4 +22,5 @@ def hatékonyság(lista):
              count = 0
     return hatekonynap
 lista = adatbeolvasás('agazati_gyak_24_4_29/adat.txt')
+print(lista)
 print(f'Hatékony napok száma: {hatékonyság(lista)}')
